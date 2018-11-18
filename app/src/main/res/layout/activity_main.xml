@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/images"
+    tools:context="com.example.vini2.myapplication.MainActivity"
+    android:fitsSystemWindows="true">
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="399dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayoutCompat">
+        <AutoCompleteTextView
+            android:text="Name"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_name" />
+
+        <AutoCompleteTextView
+            android:text="Surname"
+            android:layout_width="347dp"
+            android:layout_height="75dp"
+            android:id="@+id/editText_surname" />
+        <AutoCompleteTextView
+            android:text="Marks"
+            android:layout_width="367dp"
+            android:layout_height="74dp"
+            android:id="@+id/editText_marks" />
+        <Button
+            android:text="AddData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_add" />
+        <TextView
+            android:text="TextView"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dbInput" />
+        <Button
+            android:text="View All"
+            android:layout_width="103dp"
+            android:layout_height="38dp"
+            android:id="@+id/button3"
+            app:layout_anchor="@+id/linearLayoutCompat"
+            app:layout_anchorGravity="bottom|center_horizontal"
+            android:layout_gravity="top|left" />
+
+
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        />
+</android.support.design.widget.CoordinatorLayout>

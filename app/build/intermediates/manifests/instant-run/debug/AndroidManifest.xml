@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vini2.myapplication"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="24" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/clock1"
+        android:label="Rappel"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.vini2.myapplication.LoginActivity"
+            android:label="Rappel" >
+        </activity>
+        <activity
+            android:name="com.example.vini2.myapplication.DisplaySignUpActivity"
+            android:label="@string/Sign_up" >
+        </activity>
+        <activity
+            android:name="com.example.vini2.myapplication.ItemListActivity"
+            android:label="@string/title_item_list"
+            android:parentActivityName="com.example.vini2.myapplication.DisplaySignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.example.vini2.myapplication.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName="com.example.vini2.myapplication.ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.vini2.myapplication.ItemListActivity" />
+        </activity>
+        <activity
+            android:name="com.example.vini2.myapplication.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
